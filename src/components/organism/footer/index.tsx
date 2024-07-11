@@ -1,28 +1,17 @@
-import GlassCard from "@src/components/molecules/glass-card";
-
-import back from "@src/assets/img/card.png";
 import Image from "next/image";
-import {
-  AtSign,
-  Github,
-  Instagram,
-  Linkedin,
-  Phone,
-  VoicemailIcon,
-} from "lucide-react";
 
-import logo from "@src/assets/logo.svg";
+import { AtSign, Github, Instagram, Linkedin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer
-      className={`sticky w-full bg-no-repeat bg-center bg-cover space-y-12 bottom-0 px-8 py-6 lg:space-y-24 lg:px-32 xl:px-64`}
+    <div
+      className={`bottom-0 flex h-screen w-full snap-center snap-always flex-col place-content-center justify-between space-y-12 bg-cover bg-center bg-no-repeat px-8 pb-6 pt-24 lg:space-y-24 lg:px-32 xl:px-64`}
       style={{
         backgroundImage:
           "linear-gradient(rgba(41, 37, 36, 0.85), rgba(41, 37, 36, 0.9)), url('/background.png')",
       }}
     >
-      <section className="text-center space-y-4">
+      <section className="col-span-full space-y-4 text-center">
         <h3 className="font-sokBrubah text-4xl md:text-6xl">
           INVESTIR EM DESIGN
         </h3>
@@ -32,57 +21,57 @@ export default function Footer() {
         </p>
       </section>
 
-      <section className="grid font-timeBurner font-bold md:grid-cols-2 md:divide-x gap-16 md:gap-12">
+      <section className="grid gap-16 font-timeBurner font-bold md:grid-cols-2 md:gap-12 md:divide-x">
         <div className="space-y-8">
           <div className="space-y-2">
             <p className="text-xl md:text-2xl">Barbára Demarchi</p>
 
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <AtSign className="size-4" />
-              <p className="text-sm truncate">barbarademarchi24@yahoo.com.br</p>
+              <p className="truncate text-sm">barbarademarchi24@yahoo.com.br</p>
             </div>
 
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <Phone className="size-4" />
               <p>41 98836-9482</p>
             </div>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="flex items-center gap-4">
             <Linkedin />
             <Instagram />
           </div>
 
-          <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-purple-100 font-medium">
+          <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full border border-neutral-200 bg-purple-100 font-medium">
             <div className="inline-flex h-12 translate-y-0 items-center justify-center px-6 text-neutral-950 transition duration-500 group-hover:-translate-y-[150%]">
               Entre em contato!
             </div>
             <div className="absolute inline-flex h-12 w-full translate-y-[100%] items-center justify-center text-neutral-50 transition duration-500 group-hover:translate-y-0">
-              <span className="absolute h-full w-full translate-y-full scale-y-0 bg-purple-600 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span>
+              <span className="absolute h-full w-full translate-y-full skew-y-6 scale-y-0 bg-purple-600 transition duration-500 group-hover:translate-y-0 group-hover:scale-150"></span>
               <span className="z-10">Entre em contato!</span>
             </div>
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 justify-items-center align-items-start">
+        <div className="align-items-start grid grid-cols-2 justify-items-center gap-4">
           <div className="space-y-2">
-            <p className="text-xl md:text-2xl text-purple-400">Páginas</p>
+            <p className="text-xl text-purple-400 md:text-2xl">Páginas</p>
 
             <p>Motion</p>
             <p>Ilustração</p>
           </div>
 
           <div className="space-y-2">
-            <p className="text-xl md:text-2xl text-purple-400">Projetos</p>
+            <p className="text-xl text-purple-400 md:text-2xl">Projetos</p>
 
             <p>Felice massas</p>
           </div>
         </div>
       </section>
 
-      <section className="text-center space-y-4">
+      <section className="space-y-4 text-center">
         <Image
-          className="h-20 mx-auto aspect-video"
+          className="mx-auto aspect-video h-20"
           src="/logo.svg"
           alt="Misty logo"
           width={500}
@@ -94,11 +83,11 @@ export default function Footer() {
         </p>
       </section>
 
-      <section className="flex col-span-2 gap-4 items-center justify-end">
+      <section className="col-span-2 flex items-center justify-end gap-4">
         <small>Coded by Luiz Coelho</small>
-        <Github className="size-4 transition-colors hover:stroke-cyan-800 cursor-pointer" />
-        <Linkedin className="size-4 transition-colors hover:stroke-cyan-800 cursor-pointer " />
+        <Github className="size-4 cursor-pointer transition-colors hover:stroke-cyan-800" />
+        <Linkedin className="size-4 cursor-pointer transition-colors hover:stroke-cyan-800" />
       </section>
-    </footer>
+    </div>
   );
 }

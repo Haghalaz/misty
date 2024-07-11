@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.className} ${sokBrubah.variable} ${timeBurner.variable}`}
+        className={`${inter.className} ${sokBrubah.variable} ${timeBurner.variable} scroll-smooth`}
       >
         {children}
       </body>
