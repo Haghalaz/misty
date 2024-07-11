@@ -5,7 +5,7 @@ import GlassCard from "../components/molecules/glass-card-icon";
 import { FlipWords } from "@src/components/molecules/flip-words";
 
 function Designer() {
-  const words = ["designer", "ilustradora", "apaixonada"];
+  const words = ["designer", "ilustradora", "videomaker", "socialmedia"];
 
   return (
     <div
@@ -26,7 +26,7 @@ function Designer() {
           <p className="font-timeBurner text-3xl font-bold tracking-wider text-neutral-600 dark:text-neutral-400">
             Eu sou
             <FlipWords words={words} /> <br />
-            Seja bem vindo à galeria!
+            Bem Vindo ao Estúdio Criativo!
           </p>
         </div>
       </div>
